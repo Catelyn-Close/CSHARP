@@ -1,0 +1,24 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Random dice = new Random();
+        int roll1 = dice.Next(1,7);
+        int roll2 = dice.Next(1,7);
+        int roll3 = dice.Next(1,7);
+        int total = roll1 + roll2 + roll3;
+        string bigwords = "The greater total is: ";
+        string lilwords = "The lower total is: ";
+        string prize = "You rolled my favorite number, have a candy bar!";
+
+        Console.WriteLine((total < 10) ? lilwords + total : bigwords + total);   
+        
+        if (total == 11)
+        {
+            Console.Write(prize);
+            
+        }
+    }
+}
